@@ -14,12 +14,13 @@ from sklearn.preprocessing import (
     OrdinalEncoder,
 )
 
-from config.config import logger
-from config.config import ARTIFACTS_DIR
+from config import logger
+from config import ARTIFACTS_DIR
+from config import RAW_DIR
 
 warnings.filterwarnings("ignore")
 
-df = pd.read_csv("data/raw/data.csv")
+df = pd.read_csv(RAW_DIR)
 
 
 def create_target(df: pd.DataFrame) -> pd.DataFrame:

@@ -16,7 +16,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 from sklearn.tree import DecisionTreeClassifier
 
-from config.config import logger
+from config import logger
 
 from evidently import ColumnMapping
 from evidently.test_suite import TestSuite
