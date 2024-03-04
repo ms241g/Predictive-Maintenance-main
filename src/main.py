@@ -3,12 +3,14 @@ from pathlib import Path
 import typer
 import pickle
 import json
+import sys
 
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-from config import config
-from config.config import ARTIFACTS_DIR
+#from config import config
+from config import ARTIFACTS_DIR
+from config import RAW_DIR
 from data import (
     convert_to_celsius,
     create_target,
@@ -17,7 +19,7 @@ from data import (
     sampling,
 )
 from train import model1, model2
-from src.eda import (
+from eda import (
     setup,
     question_one,
     question_two,
@@ -27,11 +29,12 @@ from src.eda import (
     question_six
 )
 
+#print(sys.path)
 warnings.filterwarnings("ignore")
 app = typer.Typer()
 
 def get_data():
-    df = pd.read_csv("data/raw/data.csv")
+    df = pd.read_csv(RAW_DIR)
     return df
 
 def eda(df):

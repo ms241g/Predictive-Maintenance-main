@@ -14,8 +14,8 @@ import plotly
 import json
 
 
-from config.config import logger
-from config.config import ARTIFACTS_DIR
+from config import logger
+from config import ARTIFACTS_DIR
 
 warnings.filterwarnings("ignore")
 
