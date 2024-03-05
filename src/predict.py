@@ -4,6 +4,7 @@ import pickle
 from pathlib import Path
 from config.config import ARTIFACTS_DIR, logger
 
+
 def prediction(type, rpm, torque, tool_wear, air_temp, process_temp):
     with open(Path(ARTIFACTS_DIR,'model1.pkl'), 'rb') as f:
         model1 = pickle.load(f)
@@ -49,11 +50,14 @@ def prediction(type, rpm, torque, tool_wear, air_temp, process_temp):
     
     result2 = encoding[prediction2]
 
-    print(result1, result2)
+    #print(result1, result2)
 
     return result1, result2
 
-prediction('Low', 1412,	52.3,	218,25.15,	34.95)
+#prediction('Low', 1412,	52.3,	218,25.15,	34.95)
+
+#if __name__ == "__main__":
+#        app()
 
 # Sample Inputs 
 

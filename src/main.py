@@ -8,7 +8,7 @@ import sys
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
-from config import config
+#from config import config
 from config import ARTIFACTS_DIR
 from config import RAW_DIR
 from data import (
@@ -125,7 +125,7 @@ def train():
 
 
 # get_data()
-eda(get_data())
+#eda(get_data())
 # df = preprocess()
 # split_data()
 # print(df)
