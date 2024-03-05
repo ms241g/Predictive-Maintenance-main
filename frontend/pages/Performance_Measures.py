@@ -5,7 +5,8 @@ import pandas as pd
 import numpy as np
 import json
 
-app_url = "http://fastapi:8000"
+#app_url = "http://fastapi:8000"
+app_url = "http://127.0.0.1:8000"
 endpoint = "/metrics"
 model_url = f"{app_url}{endpoint}"
 

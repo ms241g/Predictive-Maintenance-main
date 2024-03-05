@@ -5,7 +5,8 @@ import streamlit as st
 import requests
 # from config.config import logger
 
-app_url = "http://fastapi:8000"
+#app_url = "http://fastapi:8000"
+app_url = "http://127.0.0.1:8000"
 endpoint = "/predict"
 model_url = f"{app_url}{endpoint}"
 
@@ -51,7 +52,7 @@ if st.button("Predict"):
     if response.ok:
         response_json = response.json()
         st.write()
-        st.write('Machine Failure?  ', response_json.get('Machine Failure? '))
+        st.write('Machine Failure:  ', response_json.get('Machine Failure: '))
         st.write('Type of Failure: ', response_json.get('Type of Failure: ')) 
     else:
         st.write('Error:', response.status_code, response.text)
